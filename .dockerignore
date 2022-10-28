@@ -1,0 +1,4 @@
+# ignore .env etc
+**/node_modules
+**/npm-debug.log
+build

@@ -1,3 +1,5 @@
+# https://dev.to/karanpratapsingh/dockerize-your-react-app-4j2e
+#
 # $ docker run --rm -it --user node -w /opt/app/ -v $(pwd):/opt/app/ node:lts-bullseye-slim /bin/bash
 
 FROM node:lts-bullseye-slim AS development
