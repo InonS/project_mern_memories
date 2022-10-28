@@ -6,5 +6,5 @@
 
 ## DevOps
 * mongodb.com/cloud/atlas
-* https://dev.to/karanpratapsingh/dockerize-your-react-app-4j2e
+* $ docker run --rm -it --user node -w /opt/app/ -v $(pwd):/opt/app/ node:lts-bullseye-slim /bin/bash
 * Hosting?
