@@ -1,0 +1,16 @@
+# https://dev.to/karanpratapsingh/dockerize-your-react-app-4j2e
+# but updated tag in FROM, and needed to change COPY to ADD
+
+version: "3.8"
+
+services:
+  app:
+    container_name: app-dev
+    image: app-dev
+    build:
+      context: .
+      target: development
+    volumes:
+      - .:/opt/app
+    ports:
+      - 3000:3000
