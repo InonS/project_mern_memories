@@ -5,13 +5,15 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon index.js",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dev": "docker-compose -f docker-compose.dev.yml up",
   "devDependencies": {
+    "jest": "^29.2.2",
     "request": "^2.88.2"
   },
   "dependencies": {
