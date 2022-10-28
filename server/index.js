@@ -4,7 +4,11 @@ import cors from 'cors'; // cross-origin requests
 import express from 'express'; // routing
 import mongoose from 'mongoose'; // models for POSTs
 
+import postRoutes from './routes/posts.js';
+
 const app = express();
+
+app.use('/posts', postRoutes);
 
 app.use(bodyParser.json({
     limit: "30mb", // images
@@ -35,11 +39,11 @@ function app_port() {
 }
 
 function set_app_to_listen() {
-    const app_port = app_port()
-    app.listen(app_port, console.log(`Server running on port ${app_port}`))
+    const _app_port = app_port()
+    app.listen(_app_port, console.log(`Server running on port ${_app_port}`))
 }
 
-const mongoose_options = {useNewUrlParse: true, useUnifiedTopology: true} // avoids some warnings
+const mongoose_options = {useUnifiedTopology: true} // avoids some warnings. {useNewUrlParse: true} no longer supported...
 mongoose.connect(db_connection_uri(), mongoose_options)
     .then(()=> set_app_to_listen())
     .catch((error)=> console.error(error.message))
