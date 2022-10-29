@@ -1,4 +1,6 @@
-// handlers
+/**
+ * Handlers and logic
+ */
 
 import PostMessage from "../models/postMessage.js";
 

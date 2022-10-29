@@ -1,9 +1,9 @@
-import express from 'express';
-
 /** Keep API clean!
  * Routes only, here.
  * Move all handling and logic to '/controllers/..."
 */
+
+import express from 'express';
 
 import { getPosts, createPost } from '../controllers/posts.js';
 

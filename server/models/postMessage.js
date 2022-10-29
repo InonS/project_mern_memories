@@ -1,8 +1,8 @@
-import mongoose, { mongo } from 'mongoose';
-
 /** Explicit data model! 
  * CRUD and query functionalities provided by Mongoose
 */
+
+import mongoose, { mongo } from 'mongoose';
 
 const postSchema = mongoose.Schema({
     title: String,
