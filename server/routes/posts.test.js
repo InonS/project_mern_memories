@@ -2,16 +2,15 @@
 
 const request = require('request');
 
-function server_url() {
+function server_url(route) {
 	const SRV_HOST = 'host.docker.internal'; // connecting to localhost over [docker networking](https://docs.docker.com/desktop/networking/)
-	const SVR_PORT = 5000;
-  const SVR_ROUTE = '/posts'
-	return 'http://' + SRV_HOST + ':' + String(SVR_PORT) + SVR_ROUTE;
+	const SRV_PORT = 5000; // TODO: Get from environment variable
+	return 'http://' + SRV_HOST + ':' + String(SRV_PORT) + route;
 }
 
 test('GET /posts returns "works"', () => {
 
-  const request_options = { url: server_url() };
+  const request_options = { url: server_url('/posts') };
   const promise = request.get(request_options)
   request(server_url(), function (error, response, body) {
   

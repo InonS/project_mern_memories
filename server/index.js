@@ -34,7 +34,7 @@ function db_connection_uri() {
 
 function app_port() {
     const APP_PORT_DEFAULT = 5000;
-    return process.env.PORT || APP_PORT_DEFAULT;
+    return process.env.PORT || APP_PORT_DEFAULT; // TODO: Pass default by writing to this environment variable (used by Heroku)
     
 }
 
