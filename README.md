@@ -23,7 +23,7 @@ $ docker stats
 
 Run a disposable container in interactive terminal mode, logging in as a specific user in a specific working directory, mounting the present working directory to a path in the container as a volume, and exposing a specific port: 
 ```shell
-$ cd ~/src/website/client/ && docker run --rm -it --name webclient --user node -w /opt/app/ -v $(pwd):/opt/app/ -p 3000:3000 node:lts-bullseye-slim npm start
+$ pushd ~/src/website/client/ && docker run --rm -it --name webclient --user node -w /opt/app/ -v $(pwd):/opt/app/ -p 3000:3000 node:lts-bullseye-slim npm start && popd
 ```
 
 ### Development
@@ -43,7 +43,7 @@ npm install axios moment react-file-base64 redux redux-thunk
 
 Run a disposable container in interactive terminal mode, logging in as a specific user in a specific working directory, mounting the present working directory to a path in the container as a volume, and exposing a specific port: 
 ```shell
-$ cd ~/src/website/server/ && docker run --rm -it --name webserver --user node -w /opt/app/ -v $(pwd):/opt/app/ -p 5000:5000 node:lts-bullseye-slim npm start
+$ pushd ~/src/website/server/ && docker run --rm -it --name webserver --user node -w /opt/app/ -v $(pwd):/opt/app/ -p 5000:5000 node:lts-bullseye-slim npm start && popd
 ```
 * TODO: Also pass server port in as environment variable.
 
@@ -63,7 +63,7 @@ npm install body-parser cors express mongoose nodemon
 Unit Testing using [Jest](https://jestjs.io/)
 
 ```shell
-$ cd ~/src/website/server/ && docker run --rm -it --name test_webserver --user node -w /opt/app/ -v $(pwd):/opt/app/ -p 5000:5000 node:lts-bullseye-slim npm test
+$ pushd ~/src/website/server/ && docker run --rm -it --name test_webserver --user node -w /opt/app/ -v $(pwd):/opt/app/ -p 5000:5000 node:lts-bullseye-slim npm test && popd
 ```
 
 ## DevOps
