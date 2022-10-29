@@ -12,6 +12,13 @@ export const getPosts = async (req, res) => {
     }
 }
 
-export const createPost = (req, res) => {
-    res.send('post created');
+export const createPost = async (req, res) => {
+    const post = req.body; // needs frontend form for entering post details
+    const newPost = new PostMessage(post)
+    try {
+        await newPost.save();        
+        res.status(201).json(newPost); // see https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
+    } catch (error) {
+        res.status(409).json(error.message);
+    }
 }
