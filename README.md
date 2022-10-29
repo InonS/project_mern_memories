@@ -2,6 +2,21 @@
 
 https://www.youtube.com/watch?v=ngc9gnGgUdA&list=PL6QREj8te1P7VSwhrMf3D3Xt4V6_SRkhu
 
+Before attempting a deployment for development or production, first make sure your docker daemon is running, for example by running
+
+(if you're _not_ using Docker for Windows)
+```shell
+$ systemctl status docker
+```
+or
+```shell
+$ docker info
+```
+or
+```shell
+$ docker stats
+```
+
 ## [Client](client/README.md)
 
 ### Local deployement
