@@ -9,7 +9,7 @@ Before attempting a deployment for development or production, first make sure yo
 ```shell
 $ systemctl status docker
 ```
-or
+or else, either
 ```shell
 $ docker info
 ```
@@ -35,7 +35,7 @@ Set up the client app uisng a [toolchain for a single-page app](https://reactjs.
 
 ```shell
 npx create-react-app .
-npm install axios moment react-file-base64 redux redux-thunk
+npm install axios moment react-file-base64 redux redux-thunk @material-ui/core
 ```
 
 ## Server
