@@ -27,6 +27,8 @@ Run a disposable container in interactive terminal mode, logging in as a specifi
 $ pushd ~/src/website/client/ && docker run --rm -it --name webclient --user node -w /opt/app/ -v $(pwd):/opt/app/ -p 3000:3000 node:lts-bullseye-slim npm start && popd
 ```
 
+If you prefer a more lightweight Docker image, consider switching to `node:lts-alpine`.
+
 ### Development
 
 Set up the client app uisng a [toolchain for a single-page app](https://reactjs.org/docs/create-a-new-react-app.html#recommended-toolchains).
