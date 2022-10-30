@@ -1,6 +1,7 @@
 # Website
 
-https://www.youtube.com/watch?v=ngc9gnGgUdA&list=PL6QREj8te1P7VSwhrMf3D3Xt4V6_SRkhu
+* Tutorial video is [here](https://www.youtube.com/watch?v=ngc9gnGgUdA&list=PL6QREj8te1P7VSwhrMf3D3Xt4V6_SRkhu)
+* [Most recently stopped at](https://www.youtube.com/watch?v=ngc9gnGgUdA&t=2218s)
 
 Before attempting a deployment for development or production, first make sure your docker daemon is running, for example by running
 
