@@ -1,3 +1,7 @@
+/**
+ * TODO: https://redux-toolkit.js.org/tutorials/quick-start#create-a-redux-state-slice
+ */
+
 import * as api from '../api'; // actions use API, like this: api.fetchPosts()
 
 /**
