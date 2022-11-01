@@ -4,7 +4,7 @@ const initial_state_of_posts = []
 const postsReducer = (posts_state = initial_state_of_posts, action) => {
     switch (action.type) {
         case 'FETCH_ALL':
-            return posts_state;
+            return action.payload;
         case 'CREATE':
             return posts_state;
         default:

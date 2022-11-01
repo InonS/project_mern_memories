@@ -38,8 +38,10 @@ Set up the client app uisng a [toolchain for a single-page app](https://reactjs.
 
 ```shell
 npx create-react-app .
-npm install axios moment react-file-base64 redux redux-thunk @material-ui/core
+npm install axios moment react-file-base64 redux react-redux redux-thunk @material-ui/core
 ```
+
+TODO: Use [Redux Toolkit](https://redux-toolkit.js.org/). Install on build server `nmp install @reduxjs/toolkit` and test client, [for example here](https://reactjs.org/blog/2015/09/02/new-react-developer-tools.html#installation).
 
 ## Server
 
@@ -72,3 +74,10 @@ $ pushd ~/src/website/server/ && docker run --rm -it --name test_webserver --use
 
 ## DevOps
 * Hosting?
+
+## Stupid time suckers
+
+### Wall of shame
+
+1. Mistyped "userDispatch" instead of "useDispatch"
+2. Mistyped "asynch" instead of "async"
