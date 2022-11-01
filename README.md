@@ -2,6 +2,7 @@
 
 * Tutorial video is [here](https://www.youtube.com/watch?v=ngc9gnGgUdA&list=PL6QREj8te1P7VSwhrMf3D3Xt4V6_SRkhu)
 * [Most recently stopped at](https://www.youtube.com/watch?v=ngc9gnGgUdA&t=2218s)
+* [Next: Strarting from Figma](https://www.youtube.com/watch?v=4oV65GVVits&list=PL6QREj8te1P6CkO_4OIK1-nwG5OxCD5tR&index=5&t=649s)
 
 Before attempting a deployment for development or production, first make sure your docker daemon is running, for example by running
 
