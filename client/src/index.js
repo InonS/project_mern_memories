@@ -7,7 +7,8 @@
 // connecting our React app to an index.html
 
 import React from 'react';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 
 import { Provider } from 'react-redux'; // Provider allows access to state regardless of what component we're in
 
@@ -26,8 +27,14 @@ import { configureStore } from '@reduxjs/toolkit'; // https://redux-toolkit.js.o
 
 const store = configureStore({ reducer: reducers });
 
+const appJsx = <Provider store={store}>
+    <App />
+</Provider>;
+/*
 ReactDOM.render(
-    <Provider store={store}>
-        <App />
-    </Provider>, 
+    appJsx, 
 document.getElementById('root'));
+*/
+const container = document.getElementById('root');
+const root = createRoot(container); // https://reactjs.org/blog/2022/03/08/react-18-upgrade-guide.html#updates-to-client-rendering-apis
+root.render(appJsx);
