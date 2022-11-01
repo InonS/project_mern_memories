@@ -8,8 +8,6 @@ import postRoutes from './routes/posts.js';
 
 const app = express();
 
-app.use('/posts', postRoutes);
-
 app.use(bodyParser.json({
     limit: "30mb", // images
     extended: true
@@ -20,6 +18,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(cors());
 
+app.use('/posts', postRoutes);
 
 function db_connection_uri() {
     const DB_DRIVER_PROTOCOL = 'mongodb+srv';
